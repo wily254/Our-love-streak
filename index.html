@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love 💙</title>
+<style>
+  *{box-sizing:border-box}
+  body{
+    margin:0; min-height:100vh; color:#eaf2ff;
+    font-family:Arial,Helvetica,sans-serif;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(55,120,255,.18) 0 2px, transparent 3px),
+      radial-gradient(circle at 80% 70%, rgba(55,120,255,.14) 0 2px, transparent 3px),
+      #070d1b;
+    background-size:55px 55px,70px 70px;
+    display:flex; justify-content:center; padding:28px 14px;
+  }
+  .page{
+    width:min(520px,100%); min-height:90vh;
+    border:2px solid #2670dc; border-radius:28px;
+    padding:34px 25px 45px; text-align:center;
+    background:rgba(5,11,25,.82);
+    box-shadow:0 0 35px rgba(25,100,240,.15);
+  }
+  .small{letter-spacing:4px;color:#74aaff;font-weight:700;font-size:15px}
+  h1{font-size:52px;line-height:.95;margin:25px 0 15px;color:#65a2ff;font-family:cursive}
+  .heart{font-size:55px;animation:pulse 1.5s infinite}
+  p{font-size:20px;line-height:1.7;color:#dbe7ff}
+  button{
+    border:0;border-radius:40px;padding:17px 34px;margin:20px 0;
+    background:#286ee8;color:white;font-size:18px;font-weight:700;
+    box-shadow:0 8px 25px rgba(40,110,232,.3);cursor:pointer
+  }
+  button:active{transform:scale(.97)}
+  .hidden{display:none}
+  .card{
+    margin-top:25px;padding:25px;border-radius:22px;
+    border:1px solid rgba(94,157,255,.35);
+    background:rgba(19,36,70,.45)
+  }
+  .card h2{color:#79aeff}
+  .signature{font-family:cursive;font-size:29px;color:#72aaff}
+  .footer{margin-top:35px;color:#8ea6cf;font-size:14px}
+  @keyframes pulse{50%{transform:scale(1.12)}}
+  .fade{animation:fade .8s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<main class="page">
+  <div class="small">A VERY IMPORTANT INTERNET ANNOUNCEMENT</div>
+  <h1>For My Love,<br>My Favorite Person</h1>
+  <div class="heart">💙</div>
+
+  <p>
+    Congratulations. You have officially entered the tiny corner
+    of the internet dedicated entirely to you. 🌙💙
+  </p>
+
+  <button onclick="openLove()">I'm ready 🥺</button>
+
+  <section id="love" class="hidden fade">
+    <div class="card">
+      <h2>A little something for you ❤️</h2>
+      <p>
+        I could write a thousand messages and still struggle to explain
+        what you mean to me. Somehow, you make ordinary moments feel
+        special just by being part of them.
+      </p>
+      <p>
+        I love your smile, your little ways, our conversations,
+        the laughter, the random moments—and even the moments when
+        you drive me slightly crazy. 😂
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>My promise to you 🤍</h2>
+      <p>
+        I'll keep choosing you, listening to you, supporting you,
+        making you laugh, and reminding you that you are deeply loved.
+      </p>
+      <p class="signature">Always yours. 💙</p>
+    </div>
+
+    <div class="card">
+      <h2>One last thing...</h2>
+      <p>
+        If you ever wonder whether someone is thinking about you,
+        there's a very good chance it's me. 😌
+      </p>
+      <button onclick="surprise()">Tap for your surprise 🎁</button>
+      <p id="surprise" class="hidden fade">
+        I LOVE YOU. More than this tiny website could ever explain. 🥹💙
+      </p>
+    </div>
+  </section>
+
+  <div class="footer">Warning: excessive affection and questionable jokes ahead 😂</div>
+</main>
+
+<script>
+function openLove(){
+  document.getElementById("love").classList.remove("hidden");
+  window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});
+}
+function surprise(){
+  document.getElementById("surprise").classList.remove("hidden");
+}
+</script>
+</body>
+</html>
