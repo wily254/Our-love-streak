@@ -3,111 +3,295 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Love 💙</title>
+
+<title>For Ichi ❤️</title>
+
 <style>
-  *{box-sizing:border-box}
-  body{
-    margin:0; min-height:100vh; color:#eaf2ff;
-    font-family:Arial,Helvetica,sans-serif;
-    background:
-      radial-gradient(circle at 20% 20%, rgba(55,120,255,.18) 0 2px, transparent 3px),
-      radial-gradient(circle at 80% 70%, rgba(55,120,255,.14) 0 2px, transparent 3px),
-      #070d1b;
-    background-size:55px 55px,70px 70px;
-    display:flex; justify-content:center; padding:28px 14px;
-  }
-  .page{
-    width:min(520px,100%); min-height:90vh;
-    border:2px solid #2670dc; border-radius:28px;
-    padding:34px 25px 45px; text-align:center;
-    background:rgba(5,11,25,.82);
-    box-shadow:0 0 35px rgba(25,100,240,.15);
-  }
-  .small{letter-spacing:4px;color:#74aaff;font-weight:700;font-size:15px}
-  h1{font-size:52px;line-height:.95;margin:25px 0 15px;color:#65a2ff;font-family:cursive}
-  .heart{font-size:55px;animation:pulse 1.5s infinite}
-  p{font-size:20px;line-height:1.7;color:#dbe7ff}
-  button{
-    border:0;border-radius:40px;padding:17px 34px;margin:20px 0;
-    background:#286ee8;color:white;font-size:18px;font-weight:700;
-    box-shadow:0 8px 25px rgba(40,110,232,.3);cursor:pointer
-  }
-  button:active{transform:scale(.97)}
-  .hidden{display:none}
-  .card{
-    margin-top:25px;padding:25px;border-radius:22px;
-    border:1px solid rgba(94,157,255,.35);
-    background:rgba(19,36,70,.45)
-  }
-  .card h2{color:#79aeff}
-  .signature{font-family:cursive;font-size:29px;color:#72aaff}
-  .footer{margin-top:35px;color:#8ea6cf;font-size:14px}
-  @keyframes pulse{50%{transform:scale(1.12)}}
-  .fade{animation:fade .8s ease}
-  @keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #eef3ff;
+  background:
+    radial-gradient(circle at 20% 20%, #18295a 0, transparent 30%),
+    radial-gradient(circle at 80% 70%, #25153f 0, transparent 30%),
+    #070d1b;
+  display: flex;
+  justify-content: center;
+  padding: 25px 15px;
+}
+
+.container {
+  width: 100%;
+  max-width: 650px;
+}
+
+.card {
+  background: rgba(13, 25, 55, 0.94);
+  border: 1px solid #38599b;
+  border-radius: 28px;
+  padding: 35px 25px;
+  margin-bottom: 25px;
+  text-align: center;
+  box-shadow: 0 15px 45px rgba(0,0,0,.35);
+}
+
+h1 {
+  color: #75a8ff;
+  font-size: 42px;
+  margin-bottom: 5px;
+}
+
+.nickname {
+  font-size: 21px;
+  color: #ff8fb3;
+  margin-bottom: 25px;
+}
+
+.heart {
+  font-size: 55px;
+  animation: beat 1.3s infinite;
+}
+
+@keyframes beat {
+  50% { transform: scale(1.15); }
+}
+
+h2 {
+  color: #79aaff;
+  font-size: 27px;
+}
+
+p {
+  font-size: 19px;
+  line-height: 1.8;
+  color: #dce6ff;
+}
+
+.highlight {
+  color: #ff9abb;
+  font-weight: bold;
+}
+
+.joke {
+  background: #111f42;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 25px;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  padding: 16px 28px;
+  background: #3178ed;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+#surprise {
+  display: none;
+  margin-top: 25px;
+  padding: 25px;
+  background: #172754;
+  border-radius: 20px;
+}
+
+.ring {
+  font-size: 65px;
+}
+
+.question {
+  font-size: 23px;
+  color: #ffb0c9;
+  font-weight: bold;
+}
+
+.footer {
+  font-size: 15px;
+  color: #8192b8;
+}
 </style>
 </head>
+
 <body>
-<main class="page">
-  <div class="small">A VERY IMPORTANT INTERNET ANNOUNCEMENT</div>
-  <h1>For My Love,<br>My Favorite Person</h1>
-  <div class="heart">💙</div>
 
-  <p>
-    Congratulations. You have officially entered the tiny corner
-    of the internet dedicated entirely to you. 🌙💙
-  </p>
+<div class="container">
 
-  <button onclick="openLove()">I'm ready 🥺</button>
+  <div class="card">
+    <div class="heart">❤️</div>
 
-  <section id="love" class="hidden fade">
-    <div class="card">
-      <h2>A little something for you ❤️</h2>
-      <p>
-        I could write a thousand messages and still struggle to explain
-        what you mean to me. Somehow, you make ordinary moments feel
-        special just by being part of them.
-      </p>
-      <p>
-        I love your smile, your little ways, our conversations,
-        the laughter, the random moments—and even the moments when
-        you drive me slightly crazy. 😂
-      </p>
+    <h1>Ichi</h1>
+
+    <div class="nickname">
+      My Happiness
     </div>
 
-    <div class="card">
-      <h2>My promise to you 🤍</h2>
-      <p>
-        I'll keep choosing you, listening to you, supporting you,
-        making you laugh, and reminding you that you are deeply loved.
+    <p>
+      This little corner of the internet is dedicated to
+      <span class="highlight">you.</span>
+    </p>
+
+    <p>
+      Because somehow, out of all the people in this world,
+      you became the person who makes my heart feel at home.
+    </p>
+  </div>
+
+
+  <div class="card">
+
+    <h2>My Love Letter 💌</h2>
+
+    <p>
+      My Happiness,
+    </p>
+
+    <p>
+      I could write a thousand messages and still struggle
+      to explain exactly what you mean to me.
+    </p>
+
+    <p>
+      You have this beautiful way of turning ordinary moments
+      into memories I want to keep forever. Your smile,
+      your laugh, your little ways, our conversations,
+      and even those moments when you drive me slightly crazy
+      have all become pieces of my happiness.
+    </p>
+
+    <p>
+      I don't just love the beautiful moments with you.
+      I love <span class="highlight">you</span> — the person you are,
+      the way you make me feel, and the way my heart somehow
+      feels a little lighter whenever you're around.
+    </p>
+
+    <p>
+      If I had to choose again, I'd still choose you.
+      And if life gives me the chance, I want to keep choosing
+      you, again and again.
+    </p>
+
+    <p>
+      I love you more than words can properly explain.
+      ❤️
+    </p>
+
+  </div>
+
+
+  <div class="card joke">
+
+    <h2>One Important Announcement 😂</h2>
+
+    <p>
+      There is one thing I will never forget...
+    </p>
+
+    <p class="question">
+      You call me...
+    </p>
+
+    <p style="font-size:28px;">
+      <strong>“Mr Too Hot To Handle” 🔥😂</strong>
+    </p>
+
+    <p>
+      And honestly, I can't even argue with you.
+      You clearly know what you're talking about. 😌❤️
+    </p>
+
+  </div>
+
+
+  <div class="card">
+
+    <h2>One Last Question... 💭</h2>
+
+    <p>
+      If I could be given just <strong>one wish</strong>...
+    </p>
+
+    <button onclick="showSurprise()">
+      Tap for your surprise 🎁
+    </button>
+
+    <div id="surprise">
+
+      <div class="ring">💍</div>
+
+      <p class="question">
+        If I could be given one wish,
+        I'd wish to put a ring on that finger
+        to officially make you mine.
       </p>
-      <p class="signature">Always yours. 💙</p>
+
+      <p>
+        Not because I want to possess you,
+        but because I want to spend my life
+        choosing you, loving you, and building
+        something beautiful with you.
+      </p>
+
+      <p>
+        Until that day comes...
+        just know that my heart already knows
+        where it belongs.
+      </p>
+
+      <p style="font-size:28px;">
+        I LOVE YOU, ICHI. ❤️
+      </p>
+
     </div>
 
-    <div class="card">
-      <h2>One last thing...</h2>
-      <p>
-        If you ever wonder whether someone is thinking about you,
-        there's a very good chance it's me. 😌
-      </p>
-      <button onclick="surprise()">Tap for your surprise 🎁</button>
-      <p id="surprise" class="hidden fade">
-        I LOVE YOU. More than this tiny website could ever explain. 🥹💙
-      </p>
-    </div>
-  </section>
+  </div>
 
-  <div class="footer">Warning: excessive affection and questionable jokes ahead 😂</div>
-</main>
+
+  <div class="card">
+
+    <h2>For My Happiness 🌙</h2>
+
+    <p>
+      If you ever wonder whether someone is thinking about you,
+      there's a very good chance it's me. 😌
+    </p>
+
+    <p>
+      And if you ever wonder who loves you deeply...
+      I hope this little website reminds you.
+    </p>
+
+    <p style="font-size:28px;">
+      Always you. ❤️
+    </p>
+
+    <div class="footer">
+      Made with love, just for Ichi.
+    </div>
+
+  </div>
+
+</div>
+
 
 <script>
-function openLove(){
-  document.getElementById("love").classList.remove("hidden");
-  window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});
-}
-function surprise(){
-  document.getElementById("surprise").classList.remove("hidden");
+function showSurprise() {
+  document.getElementById("surprise").style.display = "block";
 }
 </script>
+
 </body>
 </html>
